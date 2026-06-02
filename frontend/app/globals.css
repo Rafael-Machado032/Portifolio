@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+    /* Modo Claro */
+  --bg-card: rgba(0, 0, 0, 0.05);
+  --border-card: rgba(0, 0, 0, 0.1);
+  --text-card: rgba(0, 0, 0, 0.9);
+  --neon-glow: rgba(0, 180, 216, 0.8); /* Ciano mais escuro para o modo claro */
+  --neon-bg: rgba(0, 180, 216, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-fira: var(--font-fira-code);
+  --font-montserrat: var(--font-montserrat-regular);
+  /*--font-minha-nova: var(--font-titulo); para adicionar uma nova fonte */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+     /* Modo Escuro */
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --border-card: rgba(255, 255, 255, 0.1);
+  --text-card: rgba(255, 255, 255, 1);
+  --neon-glow: rgba(0, 242, 242, 0.8); /* Seu neon original */
+  --neon-bg: rgba(0, 242, 242, 0.2);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Efeitos */
+/* Efeito de gradiente */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+}
+
+
