@@ -21,7 +21,7 @@ export async function BuscarFormacaoAction() {
         const res = await fetch(`${urlBase}/formacoes`, {
             method: 'GET',
             headers: { 'Accept': 'application/json' },
-            next: { revalidate: 3600 }
+            next: { revalidate: 86400 } // Salva em cache por 24 horas (86400 segundos)
         });
 
         if (!res.ok) return { success: false };

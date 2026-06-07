@@ -21,7 +21,7 @@ export async function BuscarCurriculoAction() {
         const res = await fetch(`${urlBase}/curriculos/1`, {
             method: 'GET',
             headers: { 'Accept': 'application/json' },
-            next: { revalidate: 3600 }
+            next: { revalidate: 86400 } // Salva em cache por 24 horas (86400 segundos)
         });
 
         if (!res.ok) return null;
