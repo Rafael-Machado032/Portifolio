@@ -52,7 +52,8 @@ export async function CriarFormacaoAction(formData: FormData) {
 
         if (!res.ok) return { success: false };
         
-        revalidatePath('/admin/item'); // Revalida a rota para atualizar os dados no frontend
+        revalidatePath('/admin');
+        revalidatePath('/');
         return {
             success: true,
             dados: dadosDoBanco.data // Retorna os dados do banco para atualizar o estado};
@@ -77,7 +78,8 @@ export async function EditarFormacaoAction(id: string | number, formData: FormDa
 
         const dadosDoBanco = await res.json();
         
-        revalidatePath('/admin/item'); // Revalida a rota para atualizar os dados no frontend
+        revalidatePath('/admin');
+        revalidatePath('/');
         return {
             success: true,
             dados: dadosDoBanco.data
@@ -97,7 +99,8 @@ export async function DeletarFormacaoAction(id: string | number) {
         });
 
         if (res.ok) {
-            revalidatePath('/admin/item'); // Revalida a rota para atualizar os dados no frontend
+            revalidatePath('/admin');
+            revalidatePath('/');
             return { success: true };
         }
         return { success: false };

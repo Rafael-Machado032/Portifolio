@@ -52,6 +52,7 @@ export async function CriarProjetoAction(formData: FormData) {
         // console.log("Resposta do servidor", dadosDoBanco);
         
         revalidatePath('/admin');
+        revalidatePath('/');
 
         if (!res.ok) return { success: false };
         return {
@@ -82,6 +83,8 @@ export async function EditarProjetoAction(id: string | number, formData: FormDat
         const dadosDoBanco = await res.json();
 
         revalidatePath('/admin');
+        revalidatePath('/');
+
         return {
             success: true,
             dados: dadosDoBanco.data
@@ -106,6 +109,7 @@ export async function DeletarProjetoAction(id: string | number) {
         if (!res.ok) return { success: false };
 
         revalidatePath('/admin');
+        revalidatePath('/');
 
         return { success: true };
     } catch (e) {

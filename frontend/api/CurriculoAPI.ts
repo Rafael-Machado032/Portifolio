@@ -48,7 +48,8 @@ export async function CriarCurriculoAction(formData: FormData) {
 
         const dadosDoBanco = await res.json();
 
-        revalidatePath('/', 'layout');
+        revalidatePath('/admin');
+        revalidatePath('/');
 
         return {
             success: true,
