@@ -21,7 +21,7 @@ export async function BuscarFormacaoAction() {
         const res = await fetch(`${urlBase}/formacoes`, {
             method: 'GET',
             headers: { 'Accept': 'application/json' },
-            cache: 'no-store' // Garante dado fresco do Laravel
+            next: { revalidate: 3600 }
         });
 
         if (!res.ok) return { success: false };
