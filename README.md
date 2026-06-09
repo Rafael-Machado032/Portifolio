@@ -61,42 +61,6 @@ npm install
 npm run dev
 ```
 
----
-
-## 📦 Bibliotecas de Efeitos e Estilização
-
-### ⌨️ Type Writer Effect
-Efeito de digitação fluida na tela.
-```bash
-npm install typewriter-effect
-```
-*Exemplo de uso:*
-```tsx
-import Typewriter from 'typewriter-effect';
-```
-
-### 🎨 Lucide React
-Biblioteca moderna de ícones vetoriais.
-```bash
-npm i lucide-react
-```
-*Exemplo de uso:*
-```tsx
-import { Nome_Do_Icone } from 'lucide-react';
-```
-
-### 🎬 Motion
-Animações fluidas e efeitos de surgimento ao rolar a página (Scroll Animation).
-```bash
-npm install framer-motion
-```
-*Exemplo de uso:*
-```tsx
-import { motion } from "framer-motion";
-```
-
----
-
 ## 🧑‍💻 Autor
 
 * **Rafael Machado** - [LinkedIn](https://www.linkedin.com/in/rafaelmachadodev/) - [E-mail](mailto:rafael_machado032@yahoo.com.br)
