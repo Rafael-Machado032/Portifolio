@@ -1,95 +1,41 @@
-# 🚀 Meu Portifolio
+## 📦 Integração com APIs e Dependências
 
-> Desenvolvido com Next.js, React e Tailwind CSS para centralizar minhas criações e evolução técnica. Totalmente responsivo, otimizado para performance e integrado aos meus repositórios de código. Através dele, você tem acesso direto aos meus projetos em Laravel, Next.js e ao meu GitHub
+### ☁️ Cloudinary (Gerenciamento de Mídias)
+Utilizado para realizar o upload e a conversão de arquivos (como PDFs e URLs) em imagens para exibição dinâmica nos cards do portfólio.
+> *Nota técnica:* Foi utilizado o SDK nativo de PHP do Cloudinary, pois os pacotes específicos de integração com Laravel ainda não possuíam compatibilidade total com a versão mais recente do framework utilizada neste projeto.
 
----
-
-## 📷 Demonstração
-
-![Screenshot do Projeto](../frontend/public/Captura%20de%20tela.png)
-*Link do projeto:* [Visite o site](https://rafaelmachadodev.vercel.app)
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-### Back-end & Banco de Dados
-* **Laravel** — Framework PHP robusto para a API e lógica de negócios.
-* **PostgreSQL** — Banco de dados utilizado PostgreSQL para persistência de dados.
-
----
-
-## ✨ Funcionalidades Principais
-
-* 🔐 Autenticação segura de usuários.
-* 🔄 Consumo de API RESTful em tempo real.
-* 🏛️ Crud para manipulação de dados com o banco.
-
----
-
-## 🚀 Como Executar o Projeto
-
-### Pré-requisitos
-Você precisará ter instalado: Git, Node.js, PHP e Composer.
-
-### 1. Clonar o repositório
+**Instalação:**
 ```bash
-git clone https://github.com/Rafael-Machado032/Back-End-Estudos.git
-cd Portifolio
+composer require cloudinary/cloudinary_php
 ```
 
-### 2. Configurar o Back-end (Laravel)
-```bash
-cd backend
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-php artisan serve
-```
-
-## Instalação das API
-
-*Cloudinary*
-Transforma pdf e url em imagem para exibição dos cards
-Cloudinary PHP SDK é api que faz conversão do pdf e url em imagem
-```bash
-    composer require cloudinary/cloudinary_php
-```
-Não foi instalado para laravel pois por enquato não é compativel com a versão novo
-No arquivo .env 
+**Configuração do Ambiente (`.env`):**
 ```ini
-    CLOUDINARY_URL=cloudinary://sua_key:seu_secret@seu_cloud_name
+CLOUDINARY_URL=cloudinary://sua_key:seu_secret@seu_cloud_name
 ```
-Esse comando retorna a imagem do pdf
+
+**Exemplo de Upload e Conversão:**
 ```php
-    use Cloudinary\Api\Upload\UploadApi;
+use Cloudinary\Api\Upload\UploadApi;
 
-    $upload = (new UploadApi())->upload(storage_path('app/public/' . $pathPDF), [
-        'resource_type' => 'auto'
-    ]);
+// Realiza o upload do PDF e retorna a URL da imagem gerada
+\(upload = (new UploadApi())->upload(storage_path('app/public/' .\)pathPDF), [
+    'resource_type' => 'auto'
+]);
 ```
-
-## Certificado SSL
-
-Por padrão o windons não conversa com os certificados PHP foi baixado o arquivo no link
-```http
-curl.se/ca/cacert.pem
-```
-e inserido no caminho C:\php\extras\ssl\cacert.pem
-No PHP.ini foi modificado onde retira o ";" e insere o caminho do certificado
-
-curl.cainfo = "C:\php\extras\ssl\cacert.pem"
-
-Faca o mesmo no
-
-openssl.cafile = "C:\php\extras\ssl\cacert.pem"
 
 ---
 
-## 🧑‍💻 Autor
+## 🔒 Configuração de Ambiente Local (Windows & SSL)
 
-* **Rafael Machado** - [LinkedIn](https://www.linkedin.com/in/rafaelmachadodev/) - [E-mail](mailto:rafael_machado032@yahoo.com.br)
+Por padrão, o ambiente PHP no Windows pode apresentar falhas de comunicação ao fazer requisições HTTPS externas (como para a API do Cloudinary) devido à ausência de certificados SSL locais. Para corrigir o erro de cURL/SSL, siga os passos abaixo:
 
+1. Baixe o arquivo de autoridade de certificação atualizado (`cacert.pem`) diretamente de: [curl.se/ca/cacert.pem](https://curl.se).
+2. Mova o arquivo baixado para o diretório do seu PHP, por exemplo: `C:\php\extras\ssl\cacert.pem`.
+3. Abra o seu arquivo de configuração `php.ini`, localize as linhas abaixo, remova o ponto e vírgula (`;`) do início delas para desativar o comentário e aponte para o caminho correto:
 
-
+```ini
+curl.cainfo = "C:\php\extras\ssl\cacert.pem"
+openssl.cafile = "C:\php\extras\ssl\cacert.pem"
+```
+4. Reinicie o seu servidor local (`php artisan serve`) para aplicar as alterações.

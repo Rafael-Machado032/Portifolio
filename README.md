@@ -1,6 +1,6 @@
-# 🚀 Meu Portifolio
+# 🚀 Meu Portfólio
 
-> Desenvolvido com Next.js, React e Tailwind CSS para centralizar minhas criações e evolução técnica. Totalmente responsivo, otimizado para performance e integrado aos meus repositórios de código. Através dele, você tem acesso direto aos meus projetos em Laravel, Next.js e ao meu GitHub
+> Desenvolvido com Next.js, React e Tailwind CSS para centralizar minhas criações e evolução técnica. Totalmente responsivo, otimizado para performance e integrado aos meus repositórios de código. Através dele, você tem acesso direto aos meus projetos em Laravel, Next.js e ao meu GitHub.
 
 ---
 
@@ -14,28 +14,29 @@
 ## 🛠️ Tecnologias Utilizadas
 
 ### Front-end
-* **Next.js** — Framework React para produção.
-* **TypeScript** — Tipagem estática para maior segurança no código.
+* **Next.js** — Framework React focado em produção e SSR.
+* **TypeScript** — Tipagem estática para maior segurança e escalabilidade.
 * **Tailwind CSS** — Estilização rápida e responsiva baseada em classes utilitárias.
 
-## Back-end & Banco de Dados
-* **Laravel** — Framework PHP robusto para a API e lógica de negócios.
-* **PostgreSQL** — Banco de dados utilizado PostgreSQL para persistência de dados.
+### Back-end & Banco de Dados
+* **Laravel** — Framework PHP robusto para construção da API e lógica de negócios.
+* **PostgreSQL** — Banco de dados relacional utilizado para persistência dos dados.
 
 ---
 
 ## ✨ Funcionalidades Principais
 
-* 🔐 Autenticação segura de usuários no painel admin.
-* 📱 Design totalmente responsivo (mobile-first).
-* 🔄 Consumo de API RESTful em tempo real.
-* ⚙️ Conteudo dinâmico para cada função
+* 🔐 Autenticação segura de usuários no painel administrativo.
+* 📱 Design totalmente responsivo adaptado para dispositivos móveis (Mobile-First).
+* 🔄 Consumo de API RESTful em tempo real para gerenciamento de conteúdo.
+* ⚙️ Painel dinâmico para alteração de layouts, depoimentos e dados do perfil.
+
 ---
 
 ## 🚀 Como Executar o Projeto
 
 ### Pré-requisitos
-Você precisará ter instalado: Git, Node.js, PHP e Composer.
+Você precisará ter instalado em sua máquina: **Git**, **Node.js**, **PHP** e **Composer**.
 
 ### 1. Clonar o repositório
 ```bash
@@ -60,35 +61,38 @@ npm install
 npm run dev
 ```
 
-## Instalações de Efeitos
+---
 
-*Type Writer Effect*
-Efeito "Type Writer" onde digita os codicos Olá, Mundo! com o comando 
-```bash
-    npm install typewriter-effect
-```
-No arquivo use o import
-```tsx
-    import Typewriter from 'typewriter-effect';
-```
+## 📦 Bibliotecas de Efeitos e Estilização
 
-*Lucide*
-Biblioteca de ícones
+### ⌨️ Type Writer Effect
+Efeito de digitação fluida na tela.
 ```bash
-    npm i lucide-react
+npm install typewriter-effect
 ```
-No arquivo use o import
+*Exemplo de uso:*
 ```tsx
-    import { Nome_Do_Icone } from 'lucide-react';
+import Typewriter from 'typewriter-effect';
 ```
 
-*Motion*
-Criar efeito scroll onde aparece os elementos
+### 🎨 Lucide React
+Biblioteca moderna de ícones vetoriais.
 ```bash
-    npm install motion
+npm i lucide-react
 ```
+*Exemplo de uso:*
 ```tsx
-    import { motion } from "motion/react"
+import { Nome_Do_Icone } from 'lucide-react';
+```
+
+### 🎬 Motion
+Animações fluidas e efeitos de surgimento ao rolar a página (Scroll Animation).
+```bash
+npm install framer-motion
+```
+*Exemplo de uso:*
+```tsx
+import { motion } from "framer-motion";
 ```
 
 ---
@@ -96,5 +100,3 @@ Criar efeito scroll onde aparece os elementos
 ## 🧑‍💻 Autor
 
 * **Rafael Machado** - [LinkedIn](https://www.linkedin.com/in/rafaelmachadodev/) - [E-mail](mailto:rafael_machado032@yahoo.com.br)
-
-

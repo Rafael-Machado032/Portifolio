@@ -1,96 +1,41 @@
-# 🚀 Meu Portifolio
+# 🖥️ Portfólio - Front-end (Next.js)
 
-> Desenvolvido com Next.js, React e Tailwind CSS para centralizar minhas criações e evolução técnica. Totalmente responsivo, otimizado para performance e integrado aos meus repositórios de código. Através dele, você tem acesso direto aos meus projetos em Laravel, Next.js e ao meu GitHub
+Este é o ecossistema de front-end do meu portfólio. Uma aplicação web moderna, performática e focada na experiência do usuário (UX), construída com Next.js e TypeScript.
 
----
+## 🛠️ Tecnologias e Ecossistema
 
-## 📷 Demonstração
+* **Next.js** — Framework React com renderização híbrida (SSR/SSG) e roteamento baseado em App Router.
+* **TypeScript** — Tipagem estática para evitar erros em tempo de execução.
+* **Tailwind CSS** — Framework utilitário para estilização responsiva e ágil.
 
-![Screenshot do Projeto](./public/Captura%20de%20tela.png)
-*Link do projeto:* [Visite o site](https://rafaelmachadodev.vercel.app)
+## 📦 Bibliotecas de Efeitos e Interface
 
----
-
-## 🛠️ Tecnologias Utilizadas
-
-### Front-end
-* **Next.js** — Framework React para produção.
-* **TypeScript** — Tipagem estática para maior segurança no código.
-* **Tailwind CSS** — Estilização rápida e responsiva baseada em classes utilitárias.
-
----
-
-## ✨ Funcionalidades Principais
-
-* 🔐 Autenticação segura de usuários no painel admin.
-* 📱 Design totalmente responsivo (mobile-first).
-* 🔄 Consumo de API RESTful em tempo real.
-* ⚙️ Conteudo dinâmico para cada função
----
-
-## 🚀 Como Executar o Projeto
-
-### Pré-requisitos
-Você precisará ter instalado: Git, Node.js, PHP e Composer.
-
-### 1. Clonar o repositório
+### ⌨️ Type Writer Effect
+Efeito de digitação fluida na seção Hero.
 ```bash
-git clone https://github.com/Rafael-Machado032/Portifolio.git
+npm install typewriter-effect
 ```
 
-### 2. Configurar o Back-end (Laravel)
+### 🎨 Lucide React
+Pacote de ícones limpos e consistentes.
 ```bash
-cd backend
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-php artisan serve
+npm i lucide-react
 ```
 
-### 3. Configurar o Front-end (Next.js)
-Abra um novo terminal na raiz do projeto:
+### 🎬 Motion
+Animações de transição e scroll da página.
 ```bash
-cd frontend
-npm install
-npm run dev
+npm install framer-motion
 ```
 
-## Instalações de Efeitos
-
-*Type Writer Effect*
-Efeito "Type Writer" onde digita os codicos Olá, Mundo! com o comando 
-```bash
-    npm install typewriter-effect
-```
-No arquivo use o import
-```tsx
-    import Typewriter from 'typewriter-effect';
+## ⚙️ Variáveis de Ambiente (`.env.local`)
+Crie um arquivo `.env.local` na raiz desta pasta com as seguintes chaves:
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000/api
+NEXT_PUBLIC_CLOUDINARY_URL=sua_url_do_cloudinary
 ```
 
-*Lucide*
-Biblioteca de ícones
-```bash
-    npm i lucide-react
-```
-No arquivo use o import
-```tsx
-    import { Nome_Do_Icone } from 'lucide-react';
-```
-
-*Motion*
-Criar efeito scroll onde aparece os elementos
-```bash
-    npm install motion
-```
-```tsx
-    import { motion } from "motion/react"
-```
-
----
-
-## 🧑‍💻 Autor
-
-* **Rafael Machado** - [LinkedIn](https://www.linkedin.com/in/rafaelmachadodev/) - [E-mail](mailto:rafael_machado032@yahoo.com.br)
-
-
+## 🚀 Scripts Disponíveis
+* `npm run dev` — Inicia o servidor de desenvolvimento.
+* `npm run build` — Cria a versão de produção otimizada.
+* `npm start` — Inicia o servidor Next.js em produção.
