@@ -29,7 +29,7 @@ export default function Cont_Projeto({ projetoDados }: { projetoDados: Projeto }
     }, [projetoDados.descricao]);
 
     return (
-        <div className="flex flex-col max-w-sm rounded-2xl text-white bg-gray-500 dark:bg-[#222222] border border-[#00f1fe00] hover:border-[#00f2fe] dark:hover:border-[#00f2fe] hover:shadow-[0_0_20px_rgba(0,133,140,0.6)] dark:hover:shadow-[0_0_20px_rgba(0,242,242,0.6)] hover:scale-105 transition-all duration-300">
+        <div className="flex flex-col max-w-sm min-h-[430.2px] rounded-2xl text-white bg-gray-500 dark:bg-[#222222] border border-[#00f1fe00] hover:border-[#00f2fe] dark:hover:border-[#00f2fe] hover:shadow-[0_0_20px_rgba(0,133,140,0.6)] dark:hover:shadow-[0_0_20px_rgba(0,242,242,0.6)] hover:scale-105 transition-all duration-300">
             <div className="relative w-full aspect-video">
                 <NextImage className="rounded-t-2xl" src={projetoDados.layout_url} alt="Capa" fill unoptimized priority />
             </div>
