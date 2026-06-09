@@ -60,7 +60,7 @@ export default function Projeto() {
                                 scale: 1.02,
                                 transition: { duration: 0.2 }
                             }}
-                            className="w-full flex justify-center"
+                            className="w-full flex justify-center items-start"
                         >
                             <Cont_Projeto key={item.id} projetoDados={item} />
                         </motion.div>

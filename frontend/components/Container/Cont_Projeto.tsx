@@ -33,7 +33,7 @@ export default function Cont_Projeto({ projetoDados }: { projetoDados: Projeto }
             <div className="relative w-full aspect-video">
                 <NextImage className="rounded-t-2xl" src={projetoDados.layout_url} alt="Capa" fill unoptimized priority />
             </div>
-            <div className="flex flex-col justify-between w-80 gap-2 p-4 h-full">
+            <div className="flex flex-col justify-between w-80 gap-2 p-4 flex-1">
                 <div>
                     <span className="text-[#00f2ff] bg-[#00424572] px-4 pb-1 rounded-4xl">{projetoDados.tecnologia.split(',').map(t => t.trim()).join(' + ')}</span>
                     <h3 className="text-xl mt-2">{projetoDados?.titulo}</h3>
