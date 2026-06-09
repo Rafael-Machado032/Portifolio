@@ -9,7 +9,7 @@
 ![Screenshot do Projeto](./site.png)
 *Link do projeto:* [Visite o site](https://rafaelmachadodev.vercel.app)
 
-![Screenshot do Projeto](./admin.png)
+![Screenshot do Painel admin](./admin.png)
 
 ---
 
