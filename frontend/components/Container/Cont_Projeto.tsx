@@ -17,7 +17,7 @@ export default function Cont_Projeto({ projetoDados }: { projetoDados: Projeto }
                 const height = textRef.current.scrollHeight; //Altura do conteudo total
                 const lineHeight = 20; //Altura da linha
                 // Se a altura real for maior que 2 linhas, mostramos o botão
-                if (height > lineHeight * 3) {//testa se 3 linhas e manor que o total do conteudo
+                if (height > lineHeight * 2) {//testa se 2 linhas e manor que o total do conteudo
                     setMostrarBotao(true);
                 } else {
                     setMostrarBotao(false);
@@ -40,7 +40,7 @@ export default function Cont_Projeto({ projetoDados }: { projetoDados: Projeto }
                     </div>
                     
                     <h3 className="text-xl mt-2">{projetoDados?.titulo}</h3>
-                    <p ref={textRef} className={`dark:text-[#aaaaaa] text-sm overflow-hidden transition-all duration-500 ease-in-out ${!expandido ? 'line-clamp-3' : 'line-clamp-none'}`}>
+                    <p ref={textRef} className={`dark:text-[#aaaaaa] text-sm overflow-hidden transition-all duration-500 ease-in-out ${!expandido ? 'line-clamp-2' : 'line-clamp-none'}`}>
                         {projetoDados?.descricao}
                     </p>
                     {mostrarBotao && (
@@ -52,7 +52,7 @@ export default function Cont_Projeto({ projetoDados }: { projetoDados: Projeto }
                         </button>
                     )}
                 </div>
-                <div className="flex justify-center items-center gap-1 mt-6">
+                <div className="flex justify-center items-center gap-1">
                     <Demo href={projetoDados?.demonstracao_url} />
                     {projetoDados.github_url &&
                         <GithubProjeto href={projetoDados?.github_url} />
