@@ -43,11 +43,11 @@ export async function CriarCurriculoAction(formData: FormData) {
             body: formData,
             headers: headers
         });
+
         const dadosDoBanco = await res.json();
         console.log("Resposta do servidor", dadosDoBanco);
-        if (!res.ok) return { success: false };
-
         
+        if (!res.ok) return { success: false };
 
         revalidatePath('/admin');
         revalidatePath('/');
